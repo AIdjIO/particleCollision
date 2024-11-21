@@ -81,8 +81,8 @@ def motion(r, v, id_pairs, ts, dt, d_cutoff):
 
         v[0,r[0]>1] = -np.abs(v[0,r[0]>1])
         v[0,r[0]<0] = np.abs(v[0,r[0]<0])
-        v[0,r[1]>1] = -np.abs(v[0,r[1]>1])
-        v[0,r[1]<0] = np.abs(v[0,r[1]<0])
+        v[1,r[1]>1] = -np.abs(v[1,r[1]>1])
+        v[1,r[1]<0] = np.abs(v[1,r[1]<0])
 
         r = r + v*dt
         rs[i] = r.copy()
